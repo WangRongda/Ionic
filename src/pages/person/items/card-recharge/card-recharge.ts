@@ -19,4 +19,33 @@ export class CardRechargePage {
 	onChangeTime(e) {
 		this.price = e;
 	}
+	
+	selectCard() {
+		let alert = this.alertCtrl.create({
+			message: `
+			<ion-list radio-group>
+		  <ion-list-header>
+		    Language
+		  </ion-list-header>
+		
+		  <ion-item>
+		    <ion-label>Go</ion-label>
+		    <ion-radio checked="true" value="go"></ion-radio>
+		  </ion-item>
+		
+		  <ion-item>
+		    <ion-label>Rust</ion-label>
+		    <ion-radio value="rust"></ion-radio>
+		  </ion-item>
+		
+		  <ion-item>
+		    <ion-label>Python</ion-label>
+		    <ion-radio value="python" disabled="true"></ion-radio>
+		  </ion-item>
+			</ion-list>
+			`
+		});
+    alert.present();
+    
+	}
 }

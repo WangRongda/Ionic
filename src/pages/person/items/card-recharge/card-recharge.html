@@ -9,10 +9,11 @@
 <ion-content padding>
   <ion-list> 
     <ion-item>
-      <ion-label color="primary">卡号
-        <!-- <ion-icon name="person" color="primary"></ion-icon> -->
-      </ion-label>
-      <ion-input placeholder="Card number" type="text"></ion-input>
+      <ion-label item-left color="primary">卡号</ion-label>
+      <ion-input item-center placeholder="Card number" type="text"></ion-input>
+      <button ion-button item-right (click)="selectCard()">
+        <ion-icon name="card"></ion-icon>
+      </button>
     </ion-item>
     <ion-item>
       <ion-label color="primary">充值点数

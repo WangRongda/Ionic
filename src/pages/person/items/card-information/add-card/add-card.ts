@@ -10,15 +10,12 @@ export class AddCardPage {
 	let alert = this.alertCtrl.create({
       subTitle: 'Success!',
       buttons: [{
-          text: 'OK',
-          //role: 'destructive',
-          handler: () => {
-            this.nav.pop();
-       }
-    }]
+        text: 'OK',
+        handler: () => {
+          this.nav.pop();
+        }
+      }]
     });
     alert.present();
-    //alert.onDismiss(() => this.nav.popTo(1));
-    //alert.dismiss(() => console.log('The alert has been closed.'));
 	}
 }

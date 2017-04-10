@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { NavParams, ActionSheetController } from 'ionic-angular';
+import { NavParams, NavController, ActionSheetController } from 'ionic-angular';
 
-import { CardRechargePage } from '../card-information/card-information';
+import { CardRechargePage } from '../../card-recharge/card-recharge';
 
 @Component({
   templateUrl: 'card-detail.html',
 })
 export class CardDetailPage {
   item: any;
-  recharge: any;
-  constructor(params: NavParams, public actionSheetCtrl: ActionSheetController, public rec: CardRechargePage) {
+  constructor(params: NavParams, public navCtrl: NavController, 
+    public actionSheetCtrl: ActionSheetController) {
     this.item = params.data.item;
-    this.recharge = rec.btnRechargeClick;
   }
 
   cardDetailOperate() {
@@ -19,29 +18,32 @@ export class CardDetailPage {
   	if ('挂失' == this.item.status) {
   		operateStatus = '解除挂失'
   	}
- 	let actionSheet = this.actionSheetCtrl.create({
+   	let actionSheet = this.actionSheetCtrl.create({
       title: 'Operation',
       buttons: [
         {
+          //挂失/解除挂失
           text: operateStatus,
-          //role: 'destructive',
           handler: () => {
             console.log('Destructive clicked');
           }
         },{
           text: '解绑',
           handler: () => {
-            console.log('Archive clicked');
+            // console.log('Archive clicked');
           }
         },{
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            console.log('Cancel clicked');
+            // console.log('Cancel clicked');
           }
         }
       ]
     });
     actionSheet.present();
+  }
+  btnCharge() {
+    this.navCtrl.push(CardRechargePage);
   }
 }
