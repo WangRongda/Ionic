@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Card recharge</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list> 
+    <ion-item>
+      <ion-label color="primary">卡号
+        <!-- <ion-icon name="person" color="primary"></ion-icon> -->
+      </ion-label>
+      <ion-input placeholder="Card number" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">充值点数
+        <!-- <ion-icon name="md-lock" color="primary"></ion-icon> -->
+      </ion-label>
+      <ion-input type="number" placeholder="1点/元" min="0" (change)='onChangeTime($event.target.value)'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">总额
+        <!-- <ion-icon name="md-lock" color="primary"></ion-icon> -->
+      </ion-label>
+      <ion-input [readonly]="true" [value]="price" [(ngModel)]="price"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button class="btn-login" (click)="btnRechargeClick($event)"> 充值 </button>
+</ion-content>
