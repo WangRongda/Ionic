@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { App } from 'ionic-angular';
 
-import { BasicPage } from '../basic/basic'
+import { BasicPage } from '../basic/basic';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  constructor(private nav: NavController) {
+  constructor(private app: App) {
   }
   btnLoginClick(event) {
-  	this.nav.setRoot(BasicPage).then(() =>{
-	});
+
+  	this.app.getRootNav().setRoot(BasicPage);
 
   }
 }

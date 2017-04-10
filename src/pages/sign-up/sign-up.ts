@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { App } from 'ionic-angular';
+import { BasicPage } from '../basic/basic';
 
 @Component({
   selector: 'page-about',
@@ -8,8 +9,12 @@ import { NavController } from 'ionic-angular';
 })
 export class SignUpPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public app: App) {
 
   }
+  btnLoginClick(event) {
 
+ 	this.app.getRootNav().setRoot(BasicPage);
+
+  }
 }
