@@ -6,8 +6,17 @@ import { NavController, NavParams, AlertController  } from 'ionic-angular';
 })
 export class CardRechargePage {
 	price: any;
-	constructor(public navCtrl: NavController, public navParams: NavParams,
-		public alertCtrl: AlertController) {}
+	card: any = { 
+		number : '',
+		bool : false, // is readonly
+		fontColor : 'black'
+	}
+	constructor(public navCtrl: NavController, public params: NavParams,
+		public alertCtrl: AlertController) {
+		this.card.number = params.data.number;
+		this.card.bool = params.data.bool;
+		this.card.fontColor = params.data.fontColor;
+	}
 	btnRechargeClick(event) {
 	let alert = this.alertCtrl.create({
       //title: 'New Friend!',
@@ -17,7 +26,7 @@ export class CardRechargePage {
     alert.present();
 	}
 	onChangeTime(e) {
-		this.price = e;
+		this.price = (e * 0.1).toFixed(2);
 	}
 	
 	selectCard() {
@@ -47,5 +56,8 @@ export class CardRechargePage {
 		});
     alert.present();
     
+	}
+	isReadonly() {
+		return this.card.bool;
 	}
 }

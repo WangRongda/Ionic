@@ -15,6 +15,15 @@
 
 <ion-content padding>
   <ion-list>
+    <ion-item (click)="OpenItemOfPersonTab(this.person)">
+    <ion-avatar item-left>
+      <img src="img/avatar-cher.png">
+    </ion-avatar>
+    <h2>Person information</h2>
+    <p> zhangsan</p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
     <button ion-item *ngFor="let item of items" (click)="OpenItemOfPersonTab(item)" icon-left>
 <!--       <ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}" item-left></ion-icon> -->
       {{ item.title }}

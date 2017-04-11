@@ -5,3 +5,33 @@
   </ion-navbar>
 
 </ion-header>
+
+<ion-content padding>
+ <ion-searchbar (ionInput)="getItems($event)" placeholder="搜索记录"></ion-searchbar>
+	<ion-card (click)="historyCardClick()">
+
+		<ion-card-header>
+		Score: 98
+		</ion-card-header>
+
+		<ion-card-content>
+		<!-- Add card content here! -->
+		rank: 5 <br />
+		date: 2017/4/11
+		</ion-card-content>
+	</ion-card>
+	
+<ion-card (click)="historyCardClick()">
+
+		<ion-card-header>
+		Score: 98
+		</ion-card-header>
+
+		<ion-card-content>
+		<!-- Add card content here! -->
+		rank: 5 <br />
+		date: 2017/4/11
+		</ion-card-content>
+
+	</ion-card>
+</ion-content>

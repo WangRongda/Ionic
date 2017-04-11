@@ -12,11 +12,18 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'shop.html'
 })
 export class ShopPage {
-
+	public map: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ShopPage');
-  }
 
+  loadMap() {
+    this.map = new AMap.Map('container', {
+      resizeEnable: true,
+      zoom: 8,
+      center: [116.39,39.9]
+    });
+	}
+    ionViewDidLoad() {
+    this.loadMap();
+  }
 }

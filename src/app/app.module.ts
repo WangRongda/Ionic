@@ -23,12 +23,23 @@ import { GameRankPage } from '../pages/person/items/game-rank/game-rank';
 import { SettingPage } from '../pages/person/items/setting/setting';
 import { AboutPage } from '../pages/person/items/about/about';
 
+
 // CardInformation item: detail
 import { CardDetailPage } from '../pages/person/items/card-information/card-detail/card-detail';
 import { AddCardPage } from '../pages/person/items/card-information/add-card/add-card';
+import { PointTransferPage } from '../pages/person/items/card-information/card-detail/point-transfer/point-transfer'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+// rank
+import { RankDetailPage } from '../pages/person/items/game-rank/rank-detail/rank-detail';
+
+// game history
+import { GameHistoryDetailPage } from '../pages/person/items/game-history/game-history-detail/game-history-detail';
+
+// person
+import { ModifiedPersonInPage } from '../pages/person/items/person-information/modified-person-information/modified-person-information';
 
 @NgModule({
   declarations: [
@@ -49,7 +60,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SettingPage,
     AboutPage,
     CardDetailPage,
-    AddCardPage
+    AddCardPage,
+    PointTransferPage,
+    RankDetailPage,
+    GameHistoryDetailPage,
+    ModifiedPersonInPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -73,7 +88,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SettingPage,
     AboutPage,
     CardDetailPage,
-    AddCardPage
+    AddCardPage,
+    PointTransferPage,
+    RankDetailPage,
+    GameHistoryDetailPage,
+    ModifiedPersonInPage
   ],
   providers: [
     StatusBar,

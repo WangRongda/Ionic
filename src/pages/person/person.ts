@@ -23,12 +23,13 @@ import { AboutPage } from './items/about/about';
 })
 export class PersonPage {
 	items = [];
+  person = {page: PersonInformationPage}
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   	this.items = [
-  	{
-  		'title': '个人信息',
-  		'page': PersonInformationPage
-   	},
+//  	{
+//  		'title': '个人信息',
+//  		'page': PersonInformationPage
+//   	},
    	{
    		'title': '点卡充值',
    		'page': CardRechargePage
@@ -61,7 +62,6 @@ export class PersonPage {
   }
 
    OpenItemOfPersonTab(item) {
-    //this.navCtrl.push(ItemOfPersonTab, { item: item });
     this.navCtrl.push(item.page);
   }
 }

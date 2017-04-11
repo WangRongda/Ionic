@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavParams, NavController, ActionSheetController } from 'ionic-angular';
 
 import { CardRechargePage } from '../../card-recharge/card-recharge';
+import { PointTransferPage } from './point-transfer/point-transfer'
 
 @Component({
   templateUrl: 'card-detail.html',
@@ -44,6 +45,9 @@ export class CardDetailPage {
     actionSheet.present();
   }
   btnCharge() {
-    this.navCtrl.push(CardRechargePage);
+    this.navCtrl.push(CardRechargePage, { bool: true, number: this.item.number, fontColor: 'gray'});
+  }
+  btnTransfer() {
+    this.navCtrl.push(PointTransferPage);
   }
 }
