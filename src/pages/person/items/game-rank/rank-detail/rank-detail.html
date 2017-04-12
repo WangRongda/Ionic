@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Rank 
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding >
+<!--title-->
+	<ion-list>
+	 <ion-item>
+      <ion-icon item-left color="primary" small>Ranking</ion-icon>
+      <ion-label item-center style="text-align: right"> name</ion-label>   
+        <ion-label item-right style="text-align: right">score</ion-label>
+      </ion-item>
+      </ion-list>
+
+	<ion-list>
+	 <!-- <ion-item *ngFor="let item of rankObj.board"> -->
+	 <ion-item *ngFor="let item of rankObj.board" >
+      <ion-icon item-left color="primary">{{item.rank}}</ion-icon>
+      <ion-label item-center style="text-align: right">{{ item.member }}</ion-label>   
+        <ion-label item-right style="text-align: right"> {{ item.score }} </ion-label>
+      </ion-item>
+
+	</ion-list>
+
+</ion-content>
