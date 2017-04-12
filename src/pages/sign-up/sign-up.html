@@ -13,19 +13,19 @@
       <ion-label color="primary">
         <ion-icon name="person"></ion-icon>
       </ion-label>
-      <ion-input placeholder="Username"></ion-input>
+      <ion-input placeholder="Username" [(ngModel)]="oSignUp.account"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">
         <ion-icon name="md-lock"></ion-icon>
       </ion-label>
-      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="oSignUp.password"></ion-input>
     </ion-item>
     <ion-item>
     	<ion-label color="primary">
     		<ion-icon name="md-phone-portrait"></ion-icon>
     	</ion-label>
-    	<ion-input type="tel" placeholder="Phone number"></ion-input>
+    	<ion-input type="tel" placeholder="Phone number" [(ngModel)]="oSignUp.mobile"></ion-input>
     </ion-item>
   </ion-list>
   <button ion-button class="btn-login" (click)="btnLoginClick($event)"> Sign up </button>

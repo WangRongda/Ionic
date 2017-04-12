@@ -12,7 +12,12 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'notice.html'
 })
 export class NoticePage {
-
+	area = {
+		北京: 1, 
+		杭州: 2,
+		上海: 3,
+		深圳: 4
+	}
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {

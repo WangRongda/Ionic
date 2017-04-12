@@ -4,13 +4,13 @@
       <ion-label color="primary">
         <ion-icon name="person" color="primary"></ion-icon>
       </ion-label>
-      <ion-input placeholder="Username"></ion-input>
+      <ion-input placeholder="Username"  [(ngModel)]="oLogin.account"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label color="primary">
         <ion-icon name="md-lock" color="primary"></ion-icon>
       </ion-label>
-      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="oLogin.password"></ion-input>
     </ion-item>
   </ion-list>
   <button ion-button class="btn-login" (click)="btnLoginClick($event)"> Login </button>
