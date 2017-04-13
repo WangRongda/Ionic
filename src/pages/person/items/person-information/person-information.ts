@@ -7,6 +7,7 @@ import { ModifiedPersonInPage } from './modified-person-information/modified-per
   templateUrl: 'person-information.html'
 })
 export class PersonInformationPage {
+	arrow: any;
 	keys: any
 	personObj = {
 		account: 'wawnw1',
@@ -44,6 +45,9 @@ export class PersonInformationPage {
 	btnPersonInfor(title) {
 		if (this.styleObj[title].modified) {
 			this.navCtrl.push(ModifiedPersonInPage, { title: title });
+		}
+		else {
+			this.arrow = "detail-none";
 		}
 	}
 }

@@ -21,7 +21,8 @@ import { CardInformationPage } from '../pages/person/items/card-information/card
 import { GameHistoryPage } from '../pages/person/items/game-history/game-history';
 import { GameRankPage } from '../pages/person/items/game-rank/game-rank';
 import { SettingPage } from '../pages/person/items/setting/setting';
-import { AboutPage } from '../pages/person/items/about/about';
+import { LoginSignupPage } from '../pages/person/items/login-signup/login-signup';
+
 
 
 // CardInformation item: detail
@@ -38,8 +39,12 @@ import { RankDetailPage } from '../pages/person/items/game-rank/rank-detail/rank
 // game history
 import { GameHistoryDetailPage } from '../pages/person/items/game-history/game-history-detail/game-history-detail';
 
-// person
+// children page of person-detail page
 import { ModifiedPersonInPage } from '../pages/person/items/person-information/modified-person-information/modified-person-information';
+
+// children page of SettingPage
+import { MultiLanguagePage } from '../pages/person/items/setting/multi-language/multi-language';
+import { AboutPage } from '../pages/person/items/setting/about/about';
 
 @NgModule({
   declarations: [
@@ -64,7 +69,9 @@ import { ModifiedPersonInPage } from '../pages/person/items/person-information/m
     PointTransferPage,
     RankDetailPage,
     GameHistoryDetailPage,
-    ModifiedPersonInPage
+    ModifiedPersonInPage,
+    MultiLanguagePage,
+    LoginSignupPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -92,7 +99,9 @@ import { ModifiedPersonInPage } from '../pages/person/items/person-information/m
     PointTransferPage,
     RankDetailPage,
     GameHistoryDetailPage,
-    ModifiedPersonInPage
+    ModifiedPersonInPage,
+    MultiLanguagePage,
+    LoginSignupPage
   ],
   providers: [
     StatusBar,

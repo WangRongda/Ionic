@@ -7,7 +7,8 @@ import { CardInformationPage } from './items/card-information/card-information';
 import { GameHistoryPage } from './items/game-history/game-history';
 import { GameRankPage } from './items/game-rank/game-rank';
 import { SettingPage } from './items/setting/setting';
-import { AboutPage } from './items/about/about';
+import { LoginSignupPage } from './items/login-signup/login-signup';
+
 
 
 /*
@@ -23,45 +24,23 @@ import { AboutPage } from './items/about/about';
 })
 export class PersonPage {
 	items = [];
-  person = {page: PersonInformationPage}
+	childPage = {
+  	personInformationPage: { title: '个人资料', page: LoginSignupPage },
+  	cardInformationPage : { title: '我的点卡', page: CardInformationPage },
+  	gameHistoryPage : { title: '游戏历史', page: GameHistoryPage },
+  	gameRankPage : { title: '我的榜单', page: GameRankPage},
+  	settingPage : { title: '设置', page: SettingPage}
+	}
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	this.items = [
-//  	{
-//  		'title': '个人信息',
-//  		'page': PersonInformationPage
-//   	},
-   	{
-   		'title': '点卡充值',
-   		'page': CardRechargePage
-   	},
-   	{
-   		'title': '点卡信息',
-   		'page': CardInformationPage
-   	},
-   	{
-   		'title': '游戏记录',
-   		'page': GameHistoryPage
-   	},
-   	{
-   		'title': '游戏榜单',
-   		'page': GameRankPage
-   	},
-   	{
-   		'title': '设置',
-   		'page': SettingPage
-   	},
-   	{
-   		'title': '关于',
-   		'page': AboutPage
-   	}
-   	]
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PersonPage');
   }
 
-   OpenItemOfPersonTab(item) {
-    this.navCtrl.push(item.page);
+  navPush(target) {
+    this.navCtrl.push(target.page, { title: target.title });
   }
 }

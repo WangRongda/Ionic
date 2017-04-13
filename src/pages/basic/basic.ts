@@ -19,7 +19,7 @@ export class BasicPage {
 
   tab1Root: any = MainPage;
   tab2Root: any = ShopPage;
-  tab3Root: any = NoticePage;
+  // tab3Root: any = NoticePage;
   tab4Root: any = PersonPage;
 
   constructor(public navCtrl: NavController) {

@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Card information</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,6 +11,6 @@
   <button color="lightred" ion-item *ngFor="let item of items" (click)="btnCardsClick(item)" icon-left>
      {{ item.label + ' ' + item.number }}
     </button>
-    <button ion-button full (click)="btnAddCard()">+</button>
+    <button ion-button full (click)="btnAddCard()">添加点卡</button>
   </ion-list>
 </ion-content>

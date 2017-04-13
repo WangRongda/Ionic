@@ -7,16 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Home page</ion-title>
+    <ion-title>首页</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-	<ion-list>
-	<ion-item> Name </ion-item>
-	<ion-item> asdfa </ion-item>
-
-	</ion-list>
+  <ion-list>
+    <button ion-item  *ngFor="let item of keys" (click)="navPush(childPage[item])">
+      {{ childPage[item].title }}
+    </button>
+  </ion-list>
 </ion-content>
+
