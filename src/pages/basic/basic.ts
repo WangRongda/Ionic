@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MainPage } from '../main/main'
-import { ShopPage } from '../shop/shop'
+// import { ShopPage } from '../shop/shop'
 import { NoticePage } from '../notice/notice'
 import { PersonPage } from '../person/person'
 
@@ -18,7 +18,7 @@ import { PersonPage } from '../person/person'
 export class BasicPage {
 
   tab1Root: any = MainPage;
-  tab2Root: any = ShopPage;
+  // tab2Root: any = ShopPage;
   // tab3Root: any = NoticePage;
   tab4Root: any = PersonPage;
 

@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>个人资料</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only >
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="portrait()" detail-push>
+    <ion-avatar item-left>
+      <img src="assets/portrait.png">
+    </ion-avatar>
+    <h2>Zhangsan</h2>
+    <p>个人中心:详细，编辑...</p>
+    </ion-item>
+  </ion-list>
+  
+   <ion-list>
+    <button ion-item *ngFor="let item of keys" (click)="btnPersonInfor(item)" icon-left [style.color]='this.styleObj[item].fontColor' detail-none>
+      <span style="text-align: left"> {{ item }} </span>
+      <span style="text-align: right; float: right;" [style.color]="gray"> {{ personObj[item] }} </span>
+    </button>
+  </ion-list>
+</ion-content>
