@@ -7,19 +7,11 @@ import { PersonInformationPage } from './person-information/person-information';
 import { SearchStorePage } from './search-store/search-store'
 
 import { NoticePage } from '../notice/notice';
-import { CardRechargePage } from '../person/items/card-recharge/card-recharge';
+import { CardRechargePage } from '../card-recharge/card-recharge';
 import { MapPage } from '../map/map';
 
 import { StoreDetailPage } from './store-detail/store-detail';
 
-
-
-/*
-  Generated class for the Main page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-main',
   templateUrl: 'main.html'
@@ -71,7 +63,7 @@ export class MainPage {
       picture: "assets/Shop2.jpg"
     }
   ];
-  keys = Object.keys(this.childPage);
+  // keys = Object.keys(this.childPage);
   isLogin: false;
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public modalCtrl: ModalController, public storage: Storage) {

@@ -17,18 +17,13 @@ import { NoticePage } from '../pages/notice/notice';
 import { PersonPage } from '../pages/person/person';
 
 // PersonPage items page
-import { CardRechargePage } from '../pages/person/items/card-recharge/card-recharge';
-import { CardInformationPage } from '../pages/person/items/card-information/card-information';
 import { GameHistoryPage } from '../pages/person/items/game-history/game-history';
 import { GameRankPage } from '../pages/person/items/game-rank/game-rank';
-import { SettingPage } from '../pages/person/items/setting/setting';
+import { SettingPage } from '../pages/setting/setting';
 
 
 
 // CardInformation item: detail
-import { CardDetailPage } from '../pages/person/items/card-information/card-detail/card-detail';
-import { AddCardPage } from '../pages/person/items/card-information/add-card/add-card';
-import { PointTransferPage } from '../pages/person/items/card-information/card-detail/point-transfer/point-transfer'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -41,8 +36,8 @@ import { GameHistoryDetailPage } from '../pages/person/items/game-history/game-h
 
 
 // children page of SettingPage
-import { MultiLanguagePage } from '../pages/person/items/setting/multi-language/multi-language';
-import { AboutPage } from '../pages/person/items/setting/about/about';
+import { MultiLanguagePage } from '../pages/setting/multi-language/multi-language';
+import { AboutPage } from '../pages/setting/about/about';
 
 // main children page
 import { StoreDetailPage } from '../pages/main/store-detail/store-detail';
@@ -51,6 +46,15 @@ import { SearchStorePage } from '../pages/main/search-store/search-store';
 import { PersonInformationPage } from '../pages/main/person-information/person-information';
 // children page of person-detail page
 import { ModifiedPersonInPage } from '../pages/main/person-information/modified-person-information/modified-person-information';
+
+// Card
+import { CardRechargePage } from '../pages/card-recharge/card-recharge';
+import { CardInformationPage } from '../pages/card-information/card-information';
+import { AddCardPage } from '../pages/card-information/add-card/add-card';
+import { CardDetailPage } from '../pages/card-information/card-detail/card-detail';
+import { PointTransferPage } from '../pages/card-information/card-detail/point-transfer/point-transfer'
+
+
 
 
 

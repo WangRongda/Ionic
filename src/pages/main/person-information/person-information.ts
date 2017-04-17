@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { ModifiedPersonInPage } from './modified-person-information/modified-person-information';
+import { SettingPage } from '../../setting/setting';
 
 @Component({
   templateUrl: 'person-information.html'
@@ -9,6 +10,10 @@ import { ModifiedPersonInPage } from './modified-person-information/modified-per
 export class PersonInformationPage {
 	arrow: any;
 	keys: any
+	childPage = {
+		settingPage: { title: '设置', page: SettingPage },
+		modifiedPersonInPage: { title: '修改信息', page: ModifiedPersonInPage }
+	}
 	personObj = {
 		account: 'wawnw1',
 		label: 'Hybird',
@@ -49,5 +54,9 @@ export class PersonInformationPage {
 		else {
 			this.arrow = "detail-none";
 		}
+	}
+	
+	navPush(target) {
+		this.navCtrl.push(target.page, { title: target.title });
 	}
 }

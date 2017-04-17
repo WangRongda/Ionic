@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> {{ title }} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="navPush(childPage.multiLanguage)">
+      {{ childPage.multiLanguage.title }}
+    </button>
+  </ion-list>
+  <ion-list>
+    <button ion-item (click)="navPush(childPage.aboutPage)">
+      {{ childPage.aboutPage.title }}
+    </button>
+  </ion-list>
+</ion-content>
