@@ -1,4 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -90,6 +91,7 @@ import { PointTransferPage } from '../pages/card-information/card-detail/point-t
   ],
   imports: [
     IonicModule.forRoot(MyApp),
+    BrowserModule,
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
